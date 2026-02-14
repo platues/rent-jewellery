@@ -2,27 +2,27 @@
   <img src="./img.png" alt="Project Banner" width="100%">
 </p>
 
-# [Project Name] 🎯
+# [Rent Jewellery] 🎯
 
 ## Basic Details
 
-### Team Name: [Name]
+### Team Name: [codebreakers]
 
 ### Team Members
-- Member 1: [Name] - [College]
-- Member 2: [Name] - [College]
+- Member 1: [sana nasreen v] - [emea college of arts and science,kondotty]
+- Member 2: [thasleema k] - [emea college of arts and science,kondotty]
 
 ### Hosted Project Link
 [mention your project hosted link here]
 
 ### Project Description
-[2-3 lines about what your project does]
+[this project is an online jewellery renting website that allows users to browse, select, and book jewellery for special occasions at affordable rental prices. It includes features like smart suggestions based on budget, date-based booking, and user login. The system uses a backend with database support to manage users, jewellery items, and bookings efficiently.]
 
 ### The Problem statement
-[What problem are you solving?]
+[Many people need jewellery for weddings, parties, and special occasions but buying expensive jewellery for one-time use is costly and impractical. There is no simple digital platform where users can easily rent jewellery for short-term needs. This project solves that problem by providing an online system where users can browse, select, and book jewellery conveniently at affordable rental prices.]
 
 ### The Solution
-[How are you solving it?]
+[We solve this problem by creating an online Jewellery Renting Website where users can easily browse available jewellery, get smart suggestions based on their budget, and book items for specific dates instead of buying them. The platform includes user login, date-based booking, and backend storage using a database to manage users, jewellery items, and orders efficiently. This makes renting jewellery simple, affordable, and convenient.]
 
 ---
 
@@ -31,25 +31,25 @@
 ### Technologies/Components Used
 
 **For Software:**
-- Languages used: [e.g., JavaScript, Python, Java]
-- Frameworks used: [e.g., React, Django, Spring Boot]
-- Libraries used: [e.g., axios, pandas, JUnit]
-- Tools used: [e.g., VS Code, Git, Docker]
+- Languages used: [JavaScript,HTML,CSS,node.js]
+- Frameworks used: [express.js,mongoDB with mongoose]
+- Libraries used: [express,cors,mongoose,body-parser]
+- Tools used: [VS Code,node.js,npm]
 
 **For Hardware:**
-- Main components: [List main components]
-- Specifications: [Technical specifications]
-- Tools required: [List tools needed]
+- Main components: [laptop,RAM,storage,processor,internet]
+- Specifications: [OS,browser,server,database,display]
+- Tools required: [laptop,internet,browser]
 
 ---
 
 ## Features
 
 List the key features of your project:
-- Feature 1: [Description]
-- Feature 2: [Description]
-- Feature 3: [Description]
-- Feature 4: [Description]
+- Feature 1: [Smart Jewellery Suggestions]
+- Feature 2: [Date-Based Booking System]
+- Feature 3: [User Authentication & Management]
+- Feature 4: [Admin Panel & Jewellery Management]
 
 ---
 
@@ -83,14 +83,14 @@ List the key features of your project:
 
 #### Screenshots (Add at least 3)
 
-![Screenshot1](ss1.png)
-*Add caption explaining what this shows*
+![Screenshot1]()
+*through this page we can enter into aboutus,jewellery categories,smart suggestions *
 
 ![Screenshot2](ss2.png)
-*Add caption explaining what this shows*
+*by clicking view button we enter into a page that includes rent and deposit amount*
 
 ![Screenshot3](ss3.png)
-*Add caption explaining what this shows*
+*it is a payment page for customer*
 
 #### Diagrams
 
