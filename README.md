@@ -13,7 +13,7 @@
 - Member 2: [thasleema k] - [emea college of arts and science,kondotty]
 
 ### Hosted Project Link
-[mention your project hosted link here]
+[https://69900440cfc7fdefca82344d--rad-kringle-2ed63b.netlify.app/]
 
 ### Project Description
 [this project is an online jewellery renting website that allows users to browse, select, and book jewellery for special occasions at affordable rental prices. It includes features like smart suggestions based on budget, date-based booking, and user login. The system uses a backend with database support to manage users, jewellery items, and bookings efficiently.]
@@ -83,13 +83,13 @@ List the key features of your project:
 
 #### Screenshots (Add at least 3)
 
-![Screenshot1]()
+![Screenshot1](ss1.png.png)
 *through this page we can enter into aboutus,jewellery categories,smart suggestions *
 
-![Screenshot2](ss2.png)
+![Screenshot2](ss2.png.png)
 *by clicking view button we enter into a page that includes rent and deposit amount*
 
-![Screenshot3](ss3.png)
+![Screenshot3](ss3.png.png)
 *it is a payment page for customer*
 
 #### Diagrams
