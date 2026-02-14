@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f2f8;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Page Card Style */
+.container {
+    width: 350px;
+    margin: 40px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+}
+
+.booking {
+    margin-top: 15px;
+    font-size: 15px;
+    color: #5e3b7a;
+    text-align:left;
+    margin-top:20px;
+}
+
+/* Heading */
+h1, h2 {
+    color: #5e3b7a;
+}
+
+/* Buttons */
+button {
+    background: #6b4ba1;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    margin-top: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover {
+    background-color: #543785;
+}
+
+/* Inputs */
+input {
+    width: 90%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* Jewellery Cards */
+.card {
+    background: #fff;
+    margin: 15px auto;
+    padding: 15px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0px 3px 8px rgba(0,0,0,0.1);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Price Text */
+.price {
+    color: #333;
+    font-weight: bold;
+}
+
+/* Total Rent Text */
+.total {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #5e3b7a;
+}
+.page-header{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 420px;
+    margin: 20px auto 0;
+}
+
+
+/* Container (white box) */
+.container {
+    width: 350px;
+    margin: 100px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    position: relative;   /* ⭐ VERY IMPORTANT */
+}
+
+/* Back arrow inside box */
+.back-btn {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.back-btn:hover {
+    color: goldenrod;
+}

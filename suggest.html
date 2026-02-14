@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Suggestion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  
+<div class="container">
+    <!-- Arrow INSIDE the box -->
+    <button class="back-btn" onclick="goBack()">←</button>
+
+    <h2>Smart Suggestion</h2>
+
+    <input type="text" id="occasion" placeholder="Occasion">
+    <input type="number" id="budget" placeholder="Budget">
+
+    <button onclick="suggest()">Suggest</button>
+
+    <p id="result"></p>
+</div>
+
+<script>
+    function goBack() {
+    window.history.back();
+}
+
+function suggest(){
+    let budget = document.getElementById("budget").value;
+
+    if(budget >= 500){
+        document.getElementById("result").innerHTML="Bridal Necklace Suggested";
+    } else {
+        document.getElementById("result").innerHTML="Party Jewellery Suggested";
+    }
+}
+</script>
+
+</body>
+</html>

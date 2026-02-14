@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delivery Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  
+<div class="container">
+    <!-- Arrow INSIDE the box -->
+    <button class="back-btn" onclick="goBack()">←</button>
+
+    <h2>Delivery Details</h2>
+
+    <input type="text" id="name" placeholder="Full Name">
+    <input type="text" id="phone" placeholder="Phone Number">
+    <input type="text" id="address" placeholder="Delivery Address">
+
+    <button onclick="saveDelivery()">Continue</button>
+</div>
+
+<script>
+    function goBack() {
+    window.history.back();
+}
+
+
+function saveDelivery(){
+
+    let name = document.getElementById("name").value.trim();
+    let phone = document.getElementById("phone").value.trim();
+    let address = document.getElementById("address").value.trim();
+
+    if(name === "" || phone === "" || address === ""){
+        alert("Please fill all delivery details");
+        return;
+    }
+
+    if(phone.length !== 10){
+        alert("Enter valid phone number");
+        return;
+    }
+
+    let delivery = {
+        name: name,
+        phone: phone,
+        address: address
+    };
+
+    localStorage.setItem("deliveryDetails", JSON.stringify(delivery));
+
+    alert("Delivery details saved ✅");
+
+    window.location.href="payment.html";
+}
+
+</script>
+
+</body>
+</html>

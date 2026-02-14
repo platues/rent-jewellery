@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+
+
+
+</head>
+<body>
+
+<div class="container">
+ <!-- Arrow INSIDE the box -->
+    <button class="back-btn" onclick="goBack()">←</button>
+
+   
+    <h2>Home Page</h2>
+
+    <button onclick="aboutPage()">About Us</button>
+    <br><br>
+
+    <button onclick="viewJewels()">View Jewellery</button>
+    <br><br>
+
+    <button onclick="smartSuggest()">Smart Suggestion</button>
+
+</div>
+
+<script>
+  function goBack() {
+    window.history.back();
+}
+
+function aboutPage(){
+    window.location.href="about.html";
+}
+
+function viewJewels(){
+    window.location.href="categories.html";
+}
+
+function smartSuggest(){
+    window.location.href="suggest.html";
+}
+</script>
+
+</body>
+</html>

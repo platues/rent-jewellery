@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jewellery Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   
+<div class="container">
+    <!-- Arrow INSIDE the box -->
+    <button class="back-btn" onclick="goBack()">←</button>
+
+    <h2>Bridal jewells</h2>
+    <img src="necklace.jpg" width="200">
+
+    <p>Rent: ₹500/day</p>
+    <p>Deposit: ₹2000</p>
+
+    <button onclick="goLogin()">Rent Now</button>
+</div>
+
+
+<script>
+    function goBack() {
+    window.history.back();
+}
+
+function goLogin(){
+    window.location.href="login.html";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Booking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    
+<div class="container">
+    <!-- Arrow INSIDE the box -->
+    <button class="back-btn" onclick="goBack()">←</button>
+
+    <h2>Booking Page</h2>
+<div class="booking">
+Starting date</div> 
+<input type="date" id="start">
+<div class="booking">
+Ending date</div>   
+<input type="date" id="end">
+
+    <button onclick="calc()">Calculate Rent</button>
+
+    <p class="total" id="total"></p>
+
+    <button onclick="confirmBooking()">Confirm</button>
+</div>
+
+<script>
+    function goBack() {
+    window.history.back();
+}
+
+let user = JSON.parse(localStorage.getItem("currentUser"));
+
+if(user){
+    console.log("Welcome", user.name);
+}
+
+
+    
+function calc(){
+    let start = new Date(document.getElementById("start").value);
+    let end = new Date(document.getElementById("end").value);
+
+    let days = (end-start)/(1000*60*60*24);
+    let total = days * 500;
+
+    document.getElementById("total").innerHTML="Total Rent ₹"+total;
+}
+
+function confirmBooking(){
+    window.location.href="delivery.html";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Categories</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   
+<div class="container">
+    <!-- Arrow INSIDE the box -->
+    <button class="back-btn" onclick="goBack()">←</button>
+
+    <h2>Jewellery Categories</h2>
+
+    <div id="jewelContainer"></div>
+</div>
+
+<script>
+    function goBack() {
+    window.history.back();
+}
+
+
+// Jewellery Data (Dynamic)
+const jewellery = [
+    {
+        name: "Bridal Set",
+        price: 500,
+        deposit: 2000,
+        image: "necklace.jpg",
+        page: "detail1.html"
+    },
+    {
+        name: "Party Necklace",
+        price: 200,
+        deposit: 1000,
+        image: "party.jpg",
+        page: "detail2.html"
+    },
+    {
+        name: "Minimal Jewellery",
+        price: 100,
+        deposit: 500,
+        image: "party.jpg",
+        page: "detail3.html"
+    }
+];
+
+// Load dynamically
+const container = document.getElementById("jewelContainer");
+
+jewellery.forEach(item => {
+
+    container.innerHTML += `
+        <div class="card">
+            <img src="${item.image}">
+            <p>${item.name}</p>
+            <p class="price">₹${item.price}/day | ₹${item.deposit} Deposit</p>
+            <button onclick="viewDetails('${item.page}')">View</button>
+        </div>
+    `;
+});
+
+// One common function
+function viewDetails(page){
+    window.location.href = page;
+}
+
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+ 
+<div class="container">
+    <!-- Arrow INSIDE the box -->
+    <button class="back-btn" onclick="goBack()">←</button>
+
+    <h2>Login</h2>
+
+    <input type="email" id="email" placeholder="Email">
+    <input type="password" id="password" placeholder="Password">
+
+    <button onclick="loginUser()">Login</button>
+</div>
+
+<script>
+    function goBack() {
+    window.history.back();
+}
+
+
+function loginUser(){
+
+    let email = document.getElementById("email").value.trim();
+    let password = document.getElementById("password").value.trim();
+
+    if(email === "" || password === ""){
+        alert("Please fill all fields");
+        return;
+    }
+
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+
+    let existingUser = users.find(user => user.email === email);
+
+    // 🔹 If user exists → Login
+    if(existingUser){
+
+        if(existingUser.password === password){
+            alert("Login Successful ✅");
+            localStorage.setItem("currentUser", JSON.stringify(existingUser));
+            window.location.href="booking.html";
+        }
+        else{
+            alert("Wrong Password ❌");
+        }
+
+        return;
+    }
+
+    // 🔹 If new user → Register
+    let newUser = { email, password };
+
+    users.push(newUser);
+
+    localStorage.setItem("users", JSON.stringify(users));
+    localStorage.setItem("currentUser", JSON.stringify(newUser));
+
+    alert("Registered & Logged In ✅");
+
+    window.location.href="booking.html";
+}
+
+</script>
+
+</body>
+</html>

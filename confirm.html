@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Confirmed</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   
+<div class="container">
+    <!-- Arrow INSIDE the box -->
+    <button class="back-btn" onclick="goBack()">←</button>
+
+    <h2>🎉 Order Confirmed</h2>
+    <p>Your Jewellery is Booked</p>
+</div>
+
+<script>
+    function goBack() {
+    window.history.back();
+}
+
+    let delivery = JSON.parse(localStorage.getItem("deliveryDetails"));
+
+document.write("Deliver to: " + delivery.name);
+document.write("<br>Address: " + delivery.address);
+
+</script>
+
+</body>
+</html>

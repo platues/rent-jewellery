@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Payment Page</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+    background-color: #f5f2f8;
+            background: none;
+        }
+
+        .payment-container {
+            width: 420px;
+            margin: 60px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 12px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            text-align: left;
+            margin-bottom: 20px;
+            color: #6b4ba1;
+        }
+
+        .amount-box p {
+            font-size: 16px;
+            margin: 6px 0;
+        }
+
+        .qr-box {
+            margin: 20px 0;
+            text-align: center;
+            border: 2px dashed #ccc;
+            padding: 15px;
+        }
+
+        .qr-box img {
+            width: 180px;
+            height: 180px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 15px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 6px;
+        }
+
+        button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 10px;
+            background: #6b4ba1;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: darkgoldenrod;
+        }
+
+        .success {
+            text-align: center;
+            color: green;
+            margin-top: 15px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+<div class="payment-container">
+    <!-- Arrow INSIDE the box -->
+    <button class="back-btn" onclick="goBack()">←</button>
+
+    <h2>Payment Page</h2>
+
+    <!-- Amount Details -->
+    <div class="amount-box">
+        <p><b>Rent Amount:</b> ₹2000</p>
+        <p><b>Security Deposit:</b> ₹5000</p>
+        <p><b>Total Amount:</b> ₹7000</p>
+    </div>
+
+    <!-- QR Code Section -->
+    <div class="qr-box">
+        <p><b>Scan QR Code to Pay</b></p>
+        <!-- Replace qr.png with seller/admin QR code -->
+        <img src="qr.png" alt="Admin QR Code">
+        <p>UPI ID: admin@upi</p>
+    </div>
+
+    <!-- Payment Confirmation -->
+    <label>Payment Method</label>
+
+    <select id="paymentMethod" onchange="toggleTxn()">
+    <option value="">Select Payment Method</option>
+    <option value="UPI">UPI</option>
+    <option value="Card">Debit / Credit Card</option>
+    <option value="COD">Cash On Delivery</option>
+</select>
+
+    <label>Transaction ID (After Payment)</label>
+    <input type="text" id="txnId" placeholder="Enter transaction ID">
+
+    <button onclick="confirmPayment()">Confirm Payment</button>
+
+    <div class="success" id="successMsg">
+        ✅ Payment Successful! Order Confirmed.
+    </div>
+</div>
+
+<script>
+    function goBack() {
+    window.history.back();
+}
+
+    function toggleTxn(){
+    let method = document.getElementById("paymentMethod").value;
+
+    if(method === "COD"){
+        document.getElementById("txnId").style.display = "none";
+    } else {
+        document.getElementById("txnId").style.display = "block";
+    }
+}
+
+    function confirmPayment() {
+    let method = document.getElementById("paymentMethod").value;
+    let txn = document.getElementById("txnId").value;
+
+    if (method === "") {
+        alert("Please select payment method");
+        return;
+    }
+
+    if (method !== "COD" && txn === "") {
+        alert("Please enter transaction ID");
+        return;
+    }
+
+    let paymentData = {
+        method: method,
+        transactionId: method === "COD" ? "Pay on Delivery" : txn,
+        date: new Date().toLocaleString()
+    };
+
+    let payments = JSON.parse(localStorage.getItem("payments")) || [];
+    payments.push(paymentData);
+    localStorage.setItem("payments", JSON.stringify(payments));
+
+    document.getElementById("successMsg").style.display = "block";
+
+    setTimeout(()=>{
+        window.location.href="confirm.html";
+    },1500);
+}
+
+</script>
+
+</body>
+</html>
